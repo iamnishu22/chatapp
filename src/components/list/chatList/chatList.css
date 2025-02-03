@@ -1,0 +1,112 @@
+.chatList {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; /* Allow vertical scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.chatList::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.searchBar {
+    flex: 1;
+    background-color: rgba(17, 25, 40, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 10px;
+
+    input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        flex: 1;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.add {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(17, 25, 40, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.items {
+    display: flex;
+    position: relative; /* Ensure this is relative to position the pin button correctly */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #dddddd35;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+    /* Default background color (will be overridden by inline styles) */
+    background-color: transparent;
+}
+
+.items.unseen {
+    background-color: #87CEFA; /* Blue background for unseen messages */
+}
+
+.items img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.texts span {
+    font-weight: 500;
+}
+
+.texts p {
+    font-size: 14px;
+    font-weight: 300;
+    color: inherit; /* Ensure text color adapts to background */
+}
+.pinButton {
+    position: absolute; /* Allows pinButton to be positioned relative to .items */
+    top: 10px; /* Distance from the top of .items */
+    right: 10px; /* Distance from the right of .items */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000; /* Default color, can be changed based on design */
+}	
+
+.pinned {
+    color: blue;
+    
+}
+
+

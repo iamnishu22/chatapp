@@ -1,0 +1,139 @@
+.clickable {
+  cursor: pointer;
+}
+
+.userInfo{
+  padding:20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .user{
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      cursor: pointer;
+
+      img{
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+  }
+
+  .icons{
+      display: flex;
+      gap: 20px;
+
+      img{
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+      }
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #567a8ba6;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  background-color: #111e2c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #030405;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.modal-content input[type="file"] {
+  margin-top: 5px;
+}
+
+.modal-content img {
+  margin-top: 10px;
+  max-width: 100px;
+  height: auto;
+}
+
+.modal-content .file-preview {
+  margin-top: 10px;
+}
+/* userInfo.css */
+.qrCodeOverlay {
+position: fixed; /* or 'absolute' depending on your layout */
+top: 50%; /* Center vertically */
+left: 50%; /* Center horizontally */
+transform: translate(-50%, -50%); /* Adjust for the element's size */
+z-index: 1000; /* Ensure it appears above other content */
+background-color: white; /* Optional: background color for visibility */
+padding: 20px; /* Optional: add padding */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+border-radius: 8px; /* Optional: rounded corners */
+}
+.success-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's on top of other elements */
+  animation: fade-in 0.5s, fade-out 0.5s 2.5s; /* Animation */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

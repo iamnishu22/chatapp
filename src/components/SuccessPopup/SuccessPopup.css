@@ -1,0 +1,11 @@
+
+
+.success-popup {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+    position: fixed; /* Position it relative to the viewport */
+    top: 50%; /* Move down to the center */
+    left: 20%; /* Move right to the center */
+    right:10%;
+}
